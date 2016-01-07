@@ -1,0 +1,15 @@
+{
+  "name": "websocket-opc",
+  "version": "1.0.0",
+  "description": "WebSocket Server for Open Pixel Control Protocol. Inspired by Fadecandy and node-openpixelcontrol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "R. Bohne",
+  "license": "ISC",
+  "dependencies": {
+    "rpi-ws281x-native": "^0.8.1",
+    "ws": "^1.0.1"
+  }
+}
