@@ -6,8 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "R. Bohne",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/renebohne/websocket-opc.git"
+  },
+  "author": "R. Bohne <rene.bohne@gmail.com>",
+  "homepage": "http://www.rene-bohne.de",
+  "license": "MIT",
   "dependencies": {
     "rpi-ws281x-native": "^0.8.1",
     "ws": "^1.0.1"
