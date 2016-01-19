@@ -1,6 +1,11 @@
 var ws281x = require('rpi-ws281x-native');
 var WebSocketServer = require('ws').Server, wss= new WebSocketServer({port:8080});
 
+var express = require('express');
+var app = express();
+var server = app.listen(8888);
+app.use(express.static(__dirname + '/static'));
+
 //64 LEDs for 8x8 matrix
 ws281x.init(64);
 
