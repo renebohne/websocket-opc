@@ -14,7 +14,7 @@ This has to run as super user, because the ws281x lib needs it.
 
 
 ##HOW TO USE IT
-Open the connection on port 8888 with your web browser and you will see the 8x8 grid example by fadecandy.
+Open the connection on __port 8888 with your web browser__ and you will see the 8x8 grid example by fadecandy.
 Just edit index.html in the static folder to fit your needs.
 
 
