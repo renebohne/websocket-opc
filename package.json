@@ -14,8 +14,9 @@
   "homepage": "http://www.rene-bohne.de",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.13.3",
-    "rpi-ws281x-native": "^0.8.1",
-    "ws": "^1.0.1"
+    "express": "4.13.3",
+    "path": "0.12.7",
+    "rpi-ws281x-native": "0.8.1",
+    "ws": "1.0.1"
   }
 }

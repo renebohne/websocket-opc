@@ -59,7 +59,7 @@ wss.on('connection', function connection(ws) {
 	ws.send('something');
 });
 
-function getRadiationColor(var radiation)
+function getRadiationColor(radiation)
 {
   if(radiation>28)
   {
@@ -82,12 +82,22 @@ var offset =0;
 
 if(mode == 0)
 {
-  var radiation = Math.random(5,32);
-  for(var i=0; i<radiation;i++)
+  setInterval(function(){
+
+  var radiation = Math.random()*27+5;
+  for(var i=0; i<NUM_LEDS;i++)
   {
-    pixelData[i] = getRadiationColor(radiation);
-  }
+    if(i<radiation)
+    {
+    	pixelData[i] = getRadiationColor(radiation);
+    }
+    else
+    {
+        pixelData[i] = 0;
+    }  
+}
   ws281x.render(pixelData);
+  }, 10000);
 }
 
 else if(mode == 5)

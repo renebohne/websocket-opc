@@ -59,49 +59,21 @@ wss.on('connection', function connection(ws) {
 	ws.send('something');
 });
 
-function getRadiationColor(var radiation)
-{
-  if(radiation>28)
-  {
-    return rgb2Int(255,0,0);
-  }
-  else if(radiation>20)
-  {
-    return rgb2Int(255,200,0);
-  }
-  else if(radiation>14)
-  {
-    return rgb2Int(0,255,0);
-  }
-  return rgb2Int(0,0,255);
-
-}
-
 var pixelData = new Uint32Array(32);
 var offset =0; 
 
-if(mode == 0)
-{
-  var radiation = Math.random(5,32);
-  for(var i=0; i<radiation;i++)
-  {
-    pixelData[i] = getRadiationColor(radiation);
-  }
-  ws281x.render(pixelData);
-}
-
-else if(mode == 5)
-{
 	
 	setInterval(function () {
+	if(mode ==0)
+	{
   		for (var i = 0; i < NUM_LEDS; i++) {
     			pixelData[i] = colorwheel((offset + i) % 256);
   		}
 
   		offset = (offset + 1) % 256;
   		ws281x.render(pixelData);
-	}, 1000 / 30);
-}
+	}}, 1000 / 30);
+
 
 // rainbow-colors, taken from http://goo.gl/Cs3H0v
 function colorwheel(pos) {
